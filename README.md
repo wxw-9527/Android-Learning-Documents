@@ -1,6 +1,6 @@
 # Android-Learning-Documents
 
-	一、Java基础
+#### 一、Java基础
 
 ##### 	1.1、Java基础知识大纲
 
@@ -28,63 +28,63 @@
 
 ##### 	1.13、反射
 
-	二、Android基础
+#### 二、Android基础
 
 ##### 	2.1、Activity知识梳理
 
-###### 	​	2.1.1、Activity生命周期
+###### 		2.1.1、Activity生命周期
 
-###### 	​	2.1.2、Activity栈
+###### 		2.1.2、Activity栈
 
-###### 	​	2.1.2、Activity状态保存和恢复
+###### 		2.1.2、Activity状态保存和恢复
 
 ##### 	2.2、Fragment知识梳理
 
-###### 	​	2.2.1、Fragment源码解析
+###### 		2.2.1、Fragment源码解析
 
-###### 	​	2.2.2、Fragment状态保存和恢复
+###### 		2.2.2、Fragment状态保存和恢复
 
-###### 	​	2.2.3、FragmentPagerAdapter和FragmentStatePagerAdapter解析
+###### 		2.2.3、FragmentPagerAdapter和FragmentStatePagerAdapter解析
 
-###### 	​	2.2.4、FragmentPagerAdapter和FragmentStatePagerAdapter的数据更新问题
+###### 		2.2.4、FragmentPagerAdapter和FragmentStatePagerAdapter的数据更新问题
 
 ##### 	2.3、RecyclerView知识梳理
 
-###### 	​	2.3.1、综述
+###### 		2.3.1、综述
 
-###### 	​	2.3.2、Adapter
+###### 		2.3.2、Adapter
 
-###### 	​	2.3.3、LayoutManager
+###### 		2.3.3、LayoutManager
 
-###### 	​	2.3.4、ItemDecoration
+###### 		2.3.4、ItemDecoration
 
-###### 	​	2.3.5、ItemTouchHelper
+###### 		2.3.5、ItemTouchHelper
 
 ##### 	2.4、Loader知识梳理
 
-###### 	​	2.4.1、LoaderManager初探
+###### 		2.4.1、LoaderManager初探
 
-###### 	​	2.4.2、initLoader和restarLoader的区别
+###### 		2.4.2、initLoader和restarLoader的区别
 
-###### 	​	2.4.3、自定义Loader
+###### 		2.4.3、自定义Loader
 
 ##### 	2.5、Android异步任务知识梳理
 
-###### 	​	2.5.1、AsyncTask解析
+###### 		2.5.1、AsyncTask解析
 
-###### 	​	2.5.2、HanderThread解析
+###### 		2.5.2、HanderThread解析
 
-###### 	​	2.5.3、AsyncQueryHandler解析
+###### 		2.5.3、AsyncQueryHandler解析
 
 ##### 	2.6、Android数据存储知识梳理
 
-###### 	​	2.6.1、SQliteOpenHelper源码解析
+###### 		2.6.1、SQliteOpenHelper源码解析
 
-###### 	​	2.6.2、Android存储目录
+###### 		2.6.2、Android存储目录
 
-###### 	​	2.6.3、SharedPreference源码解析
+###### 		2.6.3、SharedPreference源码解析
 
-###### 	​	2.6.4、数据库升级操作的处理策略
+###### 		2.6.4、数据库升级操作的处理策略
 
 ##### 	2.7、状态栏
 
@@ -94,37 +94,37 @@
 
 ##### 	2.10、版本适配
 
-	三、开源框架
+#### 三、开源框架
 
 ##### 	3.1、Retrofit
 
-###### 	​	3.1.1、流程分析
+###### 		3.1.1、流程分析
 
-###### 	​	3.1.2、Retrofit动态代理内部实现
+###### 		3.1.2、Retrofit动态代理内部实现
 
 ##### 	3.2、OkHttp
 
-###### 	​	3.2.1、源码解析入门
+###### 		3.2.1、源码解析入门
 
-###### 	​	3.2.2、源码解析之异步请求&线程调度
+###### 		3.2.2、源码解析之异步请求&线程调度
 
-###### 	​	3.2.3、缓存基础
+###### 		3.2.3、缓存基础
 
-###### 	​	3.2.4、缓存源码解析
+###### 		3.2.4、缓存源码解析
 
 ##### 	3.3、Glide
 
-###### 	​	3.3.1、基本用法
+###### 		3.3.1、基本用法
 
-###### 	​	3.3.2、自定义Target
+###### 		3.3.2、自定义Target
 
-###### 	​	3.3.3、自定义transform
+###### 		3.3.3、自定义transform
 
-###### 	​	3.3.4、自定义GlideModule
+###### 		3.3.4、自定义GlideModule
 
-###### 	​	3.3.5、Glide源码解析之流程剖析
+###### 		3.3.5、Glide源码解析之流程剖析
 
-	四、算法
+#### 四、算法
 
 ##### 	4.1、排序算法
 
@@ -154,7 +154,7 @@
 
 ##### 	4.14、数字算法
 
-	五、kotlin
+#### 五、kotlin
 
 ##### 	5.1、kotlin基础
 
@@ -182,7 +182,7 @@
 
 ##### 	5.13、运行时的泛型
 
-	六、多线程
+#### 六、多线程
 
 ##### 	6.1、并发编程的艺术
 
@@ -210,7 +210,7 @@
 
 ##### 	6.13、ReentrantReadWriteLock原理
 
-	七、插件化
+#### 七、插件化
 
 ##### 	7.1、Small框架之如何引入应用插件
 
@@ -232,13 +232,13 @@
 
 ##### 	7.10、Service插件化实现及原理
 
-	八、NDK
+#### 八、NDK
 
 ##### 	8.1、使用CMake进行NDK开发(一)
 
 ##### 	8.2、使用CMake进行NDK开发并编写CMakeLists.txt脚本
 
-	九、Material Design控件
+#### 九、Material Design控件
 
 ##### 	9.1、Android Design Support Library
 
@@ -258,35 +258,35 @@
 
 ##### 	9.9、TextInputLayout
 
-	十、性能优化
+#### 十、性能优化
 
 ##### 	10.1、性能优化工具
 
-###### 	​	10.1.1、TraceView
+###### 		10.1.1、TraceView
 
-###### 	​	10.1.2、Systrace
+###### 		10.1.2、Systrace
 
-###### 	​	10.1.3、调试GPU过度绘制&GPU呈现模式分析
+###### 		10.1.3、调试GPU过度绘制&GPU呈现模式分析
 
-###### 	​	10.1.4、Hierarchy Viewer
+###### 		10.1.4、Hierarchy Viewer
 
-###### 	​	10.1.5、MAT
+###### 		10.1.5、MAT
 
-###### 	​	10.1.6、Memory Monitor & Heap Viewer & Allocation Tracker
+###### 		10.1.6、Memory Monitor & Heap Viewer & Allocation Tracker
 
-###### 	​	10.1.7、LeakCanary
+###### 		10.1.7、LeakCanary
 
-###### 	​	10.1.8、Lint
+###### 		10.1.8、Lint
 
 ##### 	10.2、性能优化技巧
 
-###### 	​	10.2.1、布局优化
+###### 		10.2.1、布局优化
 
-###### 	​	10.2.2、内存优化
+###### 		10.2.2、内存优化
 
-###### 	​	10.2.3、列表卡顿排查
+###### 		10.2.3、列表卡顿排查
 
-	十一、设计模式
+#### 十一、设计模式
 
 ##### 	11.1、适配器模式
 
@@ -302,7 +302,7 @@
 
 ##### 	11.7、代理模式
 
-	十二、组件化
+#### 十二、组件化
 
 ##### 	12.1、Arouter的基本使用
 
@@ -310,74 +310,74 @@
 
 ##### 	12.3、Arouter源码分析之运行时SDK
 
-	十三、View
+#### 十三、View
 
 ##### 	13.1、View绘制体系
 
-###### 	​	13.1.1、LayoutInflater#inflate源码解析
+###### 		13.1.1、LayoutInflater#inflate源码解析
 
-###### 	​	13.1.2、setContentView源码解析
+###### 		13.1.2、setContentView源码解析
 
-###### 	​	13.1.3、绘制流程之Measure解析
+###### 		13.1.3、绘制流程之Measure解析
 
-###### 	​	13.1.4、绘制流程之Layout解析
+###### 		13.1.4、绘制流程之Layout解析
 
-###### 	​	13.1.5、绘制流程之Draw解析
+###### 		13.1.5、绘制流程之Draw解析
 
-###### 	​	13.1.6、绘制流程之requestLayout和invalidate详解
+###### 		13.1.6、绘制流程之requestLayout和invalidate详解
 
-###### 	​	13.1.7、getMeasureWidth和getWidth的区别
+###### 		13.1.7、getMeasureWidth和getWidth的区别
 
 ##### 	13.2、事件传递
 
-###### 	​	13.2.1、事件分发机制
+###### 		13.2.1、事件分发机制
 
-###### 	​	13.2.2、嵌套滑动的实现原理
+###### 		13.2.2、嵌套滑动的实现原理
 
 ##### 	13.3、Cancas&Paint
 
-###### 	​	13.3.1、Canvas基础
+###### 		13.3.1、Canvas基础
 
-###### 	​	13.3.2、Canvas的保存和恢复
+###### 		13.3.2、Canvas的保存和恢复
 
-###### 	​	13.3.3、颜色合成 Paint#setColorFilter
+###### 		13.3.3、颜色合成 Paint#setColorFilter
 
-###### 	​	13.3.4、图像合成 Paint#setXfermode
+###### 		13.3.4、图像合成 Paint#setXfermode
 
-###### 	​	13.3.5、Paint#setShader
+###### 		13.3.5、Paint#setShader
 
-###### 	​	13.3.6、绘制路线Path基本用法
+###### 		13.3.6、绘制路线Path基本用法
 
 ##### 	13.4、动画
 
-###### 	​	13.4.1、转场动画ContentTransition理论
+###### 		13.4.1、转场动画ContentTransition理论
 
-###### 	​	13.4.1、转场动画ContentTransition实践
+###### 		13.4.1、转场动画ContentTransition实践
 
-	十四、图片
+#### 十四、图片
 
 ##### 	14.1、图片基础知识
 
-###### 	​	14.1.1、ImageView的ScaleType属性解析
+###### 		14.1.1、ImageView的ScaleType属性解析
 
-###### 	​	14.1.2、Bitmap占用内存分析
+###### 		14.1.2、Bitmap占用内存分析
 
-###### 	​	14.1.3、Bitmap&BitmapFactory解析
+###### 		14.1.3、Bitmap&BitmapFactory解析
 
 ##### 	14.2、图片压缩
 
-###### 	​	14.2.1、PNG原理
+###### 		14.2.1、PNG原理
 
-###### 	​	14.2.2、减小PNG大小
+###### 		14.2.2、减小PNG大小
 
-###### 	​	14.2.3、VectorDrawable简介
+###### 		14.2.3、VectorDrawable简介
 
-###### 	​	14.2.4、VectorDeawable及AnimatedVectorDrawable使用详解
+###### 		14.2.4、VectorDeawable及AnimatedVectorDrawable使用详解
 
-###### 	​	14.2.5、webp使用详解
+###### 		14.2.5、webp使用详解
 
-###### 	​	14.2.6、选择合适的图片格式
+###### 		14.2.6、选择合适的图片格式
 
-	十五、Gradle
+#### 十五、Gradle
 
 ##### 	15.1、Gradle使用配置总结
