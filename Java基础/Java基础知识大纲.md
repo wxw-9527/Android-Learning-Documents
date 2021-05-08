@@ -30,8 +30,8 @@
   - `Object`中`equals`默认的实现是比较两个对象是不是`==`，即是否指向同一对象。
 
   - Java提供的某些类重写了equals方法，先判断类型是否一致，再判断内容是否一致。例：
-  
-    ``````java
+
+    ```java
     public boolean equals(Object anObject) {
         if (this == anObject) { // 先判断引用是否相同(是否为同一对象)
             return true;
@@ -43,7 +43,7 @@
                 int i = 0;
                 while (n-- != 0) {
                     if (charAt(i) != anotherString.charAt(i))
-                            return false;
+                        return false;
                     i++;
                 }
                 return true;
@@ -52,9 +52,9 @@
         return false;
     }
     ```
-    
+
     **注意：当`equals`方法被复写时，`hashCode()`也要被复写。**
-  
+
 - hashCode
 
     `hashCode`用于在对象进行散列的时候作为`key`输入，保证散列的存取性能。`Object`的默认`hashCode`实现为在对象的内存地址上经过特定的算法计算出来的。
