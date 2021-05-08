@@ -71,4 +71,46 @@
         && ((k = e.key) == key || (key != null && key.equals(k)))) // key指向同一内存地址或key的equals方法返回true
     ```
 
-    假如我们只重写了`equals`方法而没有重写`hashCode`方法，就会导致逻辑上相等的两个`key`，放在了容器中不同的为之
+    假如我们只重写了`equals`方法而没有重写`hashCode`方法，就会导致逻辑上相等的两个`key`，放在了容器中不同的位置。
+
+##### 2.2、int & Integer
+
+ - 存储原理
+
+    - `int`属于基本数据类型，存储在栈中。
+    - `Ingeger`属于符合数据类型，引用存储在栈中，引用所指向的对象存储在堆中。
+
+- 缺省值
+
+  - 0
+  - null
+
+- 泛型支持
+
+  泛型支持`Integer`，不支持`int`
+
+- int与Integer间的比较
+
+  ```java
+  int i1 = 128; // 基本数据类型
+  Integer i2 = 128; // 非new出来的
+  Integer i3 = new Integer(128); // new出来的
+  ```
+
+  - `i2`和`i3`不相等，`i2`指向存放它的常量池（数值位与`-128`到`127`之间）或者堆，后者指向堆中的另外一块内存。
+
+  - 两个都是非`new`出来的`Integer`比较，如果在`-128`到`127`之间，返回`true`，否则返回`false`。因为`Java`在编译`Integer i2 = 128`的时候，会翻译成`Integer.valueOf(128)`，而`valueOf`函数会对`-128`到`127`之间的数进行缓存。
+
+    ```java
+    public static Integer valueOf(int i) {
+        // low = -128
+        // high = 127
+        if (i >= IntegerCache.low && i <= IntegerCache.high)
+            return IntegerCache.cache[i + (-IntegerCache.low)];
+        return new Integer(i);
+    }
+    ```
+
+  - 两个都是`new`出来的比较，返回`false`。
+
+  - `int`与`Integer`比较，都为`true`，因为会把`Integer`自动拆箱成`int`再去比较。
