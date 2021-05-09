@@ -170,5 +170,152 @@
     - 通过构造器初始化所有成员，进行深拷贝`deep copy`
     - `getter`方法中，不要直接返回对象本身，而是克隆对象，并返回对象的拷贝
 
-##### 三、关键字
+#### 三、关键字
 
+##### 3.1、final
+
+- `final`可以声明成员变量、方法、类及本地变量
+- `final`成员变量必须在声明的时候初始化或者在构造器中初始化，否则就会报编译错误
+- `final`变量是只读的
+- `final`申明的方法不可以被子类的方法重写
+- `final`类通常功能是完整的，不能被继承
+- `final`变量可以安全的在多线程环境下进行共享，而不需要额外的同步开销
+- `final`关键字提高了性能，`JVM`和`Java`应用都会缓存`final`变量，会对方法、变量及类进行优化
+- 方法内部类访问方法中的局部变量，必须用`final`修饰才能访问
+
+##### 3.2、static
+
+- 静态变量
+
+  - 又称为类变量，也就是说这个变量属于类，类所有的实例都共享静态变量，可以直接通过类型访问。静态变量在内存中只存在一份。
+
+  - 实例变量：每创建一个实例就会产生一个实例变量，它与该实例同生共死
+
+    ```java
+    public class A {
+        private int x; // 实例变量
+        private static int y; // 静态变量
+    
+        public static void main(String[] args) {
+            A a = new A();
+            int x = a.x;
+            int y = A.y;
+        }
+    }
+    ```
+
+- 静态方法
+
+  静态方法在类加载的时候就存在了，它不依赖于任何实例。所以静态方法必须有实现，也就是说它不能是抽象方法。
+
+  ```java
+  public abstract class A {
+      public static void func1() {
+          
+      }
+      // public abstract static void func2(); // Illegal combination of modifiers:'abstract' and 'static'
+  }
+  ```
+
+  只能访问所属类的静态字段和静态方法，方法中不能有`this`和`super`关键字，因为这两个关键字与具体对象关联。
+
+  ```java
+  public class A {
+  
+      private static int x;
+      private int y;
+  
+      public static void func1() {
+          int a = x;
+          int b = y; // Non-static field 'y' cannot be referenced from a static context
+          int b = this.y; // 'A.this' cannot be referenced from a static context
+      }
+  }
+  ```
+
+- 静态语句块
+
+  静态语句块在类初始化时运行一次
+
+  ```java
+  public class A {
+      
+      static {
+          System.out.println("123");
+      }
+  
+      public static void main(String[] args) {
+          A a1 = new A();
+          A a2 = new A();
+      }
+  } 
+  
+  123
+  ```
+
+- 静态内部类
+
+  非静态内部类依赖于外部类的实例，也就是说需要先创建外部类实例，才能用这个实例去创建非静态内部类。
+
+  而静态内部类不需要。
+
+  ```java
+  public class OuterClass {
+  
+      class InnerClass {}
+  
+      static class StaticInnerClass { }
+  
+      public static void main(String[] args) {
+      	// InnerClass innerClass = new InnerClass(); // 'OuterClass.this' cannot be referenced from a static context
+          OuterClass outerClass = new OuterClass();
+          InnerClass innerClass = outerClass.new InnerClass();
+          StaticInnerClass staticInnerClass = new StaticInnerClass();
+      }
+  }
+  ```
+
+  静态内部类不能访问外部类的非静态变量和方法。
+
+- 静态导包
+
+  在使用静态变量和方法是不用再指明`ClassName`，从而简化代码，但可读性大大降低。
+
+  ``` java
+  import static com.xxx.ClassName.*
+  ```
+
+- 初始化顺序
+
+  静态变量和静态语句块优先于实例变量和普通语句块，静态变量和静态语句块的初始化顺序取决于它们在代码中的顺序。
+
+  ```java
+  public static String staticField = "静态变量";
+      
+  static {
+      System.out.println("静态语句块");
+  }
+  
+  public String field = "实例变量";
+      
+  {
+      System.out.peintln("普通语句块");
+  }
+  ```
+
+  最后才是构造函数的初始化。
+
+  ```java
+  public InitialOrderTest() {
+      System.out.println("构造函数");
+  }
+  ```
+
+  存在继承的情况下，初始化顺序为
+
+  - 父类（静态变量、静态语句块）
+  - 子类（静态变量、静态语句块）
+  - 父类（实例变量、普通语句块）
+  - 父类（构造函数）
+  - 子类（实例变量、普通语句块）
+  - 子类（构造方法）
